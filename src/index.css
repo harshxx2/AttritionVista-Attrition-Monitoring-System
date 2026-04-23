@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased min-h-screen text-gray-200 bg-bg;
+    font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+  }
+
+  /* Smooth scrollbar everywhere */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+}
+
+@layer utilities {
+  .bg-card, .bg-card2 {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* ── Animated Background: CSS-only orbs ──────────────────────────── */
+.anim-orb {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+}
+
+.anim-orb-1 {
+  top: 10%;
+  left: 20%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(79,127,255,0.18) 0%, transparent 70%);
+  animation: orbFloat1 18s ease-in-out infinite;
+}
+
+.anim-orb-2 {
+  bottom: 5%;
+  right: 10%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%);
+  animation: orbFloat2 24s ease-in-out infinite;
+}
+
+.anim-orb-3 {
+  top: 50%;
+  left: 50%;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(45,212,191,0.1) 0%, transparent 70%);
+  animation: orbFloat3 20s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.06; }
+  50% { transform: translate(30px, -20px) scale(1.05); opacity: 0.12; }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.04; }
+  50% { transform: translate(-25px, 15px) scale(1.08); opacity: 0.09; }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
+  50% { transform: translate(calc(-50% + 20px), calc(-50% - 30px)) scale(1.06); opacity: 0.1; }
+}
+
+/* ── Animated Background: CSS-only particles ─────────────────────── */
+.css-particle {
+  position: absolute;
+  bottom: -10vh;
+  left: var(--x, 50%);
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  border-radius: 9999px;
+  background: rgba(79,127,255,0.6);
+  box-shadow: 0 0 8px rgba(79,127,255,0.3);
+  animation: particleFloat var(--dur, 25s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.css-particle:nth-child(odd) {
+  background: rgba(167,139,250,0.5);
+  box-shadow: 0 0 8px rgba(167,139,250,0.3);
+}
+
+.css-particle:nth-child(3n) {
+  background: rgba(45,212,191,0.5);
+  box-shadow: 0 0 8px rgba(45,212,191,0.3);
+}
+
+/* ── Modern Selection Color ───────────────────────────────────── */
+::selection {
+  background: #00d2ff;
+  color: #02040a;
+}
+
+/* ── Animation Utilities ─────────────────────────────────────── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* ── Glassmorphism Overhaul ────────────────────────────────────── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border: 1px solid rgba(79, 127, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Premium select dropdowns ────────────────────────────────────── */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-right: 32px;
+}
+
+select option {
+  background: #0A0D18;
+  color: #e5e7eb;
+}
