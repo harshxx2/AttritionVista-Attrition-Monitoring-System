@@ -1,16 +1,35 @@
-# React + Vite
+# AttritionVista: HR Analytics Intelligence Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AttritionVista is a premium, corporate-grade Employee Attrition Monitoring and Intelligence System. Built with the **MERN** stack architecture (React/Vite) and powered by **Tableau Embedding API v3**, it provides deep structural and lifecycle insights into workforce dynamics.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
+- **Executive Intelligence Overview**: High-level KPIs and departmental health nodes.
+- **Department Deep Dive (Symmetry 2.5)**: 50/50 dual-pane architecture for Role vs. Lifecycle mapping.
+- **Risk Indicator Matrix**: Real-time identification of flight risks based on Tenure and Promotion lag.
+- **Attrition Risk Simulator**: Heuristic modeling tool for projected talent flight risk.
+- **Strategic Conclusions**: Dynamic AI-driven insights engine.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technology Stack
+- **Frontend**: React 18, Vite, Tailwind CSS, Framer Motion
+- **Visuals**: Tableau Public (Embedding API v3), Recharts, Lucide Icons
+- **Design**: Sharp, architectural glassmorphism with high-contrast UI accents.
 
-## React Compiler
+## 📦 Getting Started
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/harshxx2/AttritionVista-Attrition-Monitoring-System.git
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Launch the Intelligence Hub**:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📊 Tableau Integration
+This project embeds multiple structural dashboards. To update the source viz, modify the URLs in `src/pages/` components.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+*Created by harshxx2 - 2026*
