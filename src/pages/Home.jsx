@@ -7,7 +7,6 @@ import {
   Lock, Zap as ZapIcon, Layout, PieChart, Activity
 } from 'lucide-react';
 import InteractiveButton from '../components/InteractiveButton';
-import HeroNodes from '../components/HeroNodes';
 
 const containerVariants = {
   initial: { opacity: 0 },
